@@ -84,10 +84,6 @@ body{
     border-color: black;
 }
 
-.formulario{
-    display: flex;
-}
-
 main{
     display: flex;
     justify-content: space-around;
