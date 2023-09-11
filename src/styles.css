@@ -22,7 +22,7 @@ body{
 .formulario form{
     display: flex;
     width: 480px;
-    height:300px;
+    padding: 35px 0;
     background-color: #BABABA;
     flex-direction: column;
     align-items: center;
@@ -50,6 +50,31 @@ body{
     font-weight: light;
     padding: 16px;
     
+}
+
+.campo-form-group-icon {
+    position: relative;
+}
+
+.campo-form-icon {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background-color: rgba(10, 112, 171, 0.63);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.campo-form-icon:hover {
+    color: rgba(10, 112, 171, 0.63);
+    background-color: white;
+    transition: 660ms;
 }
 
 .botao-form input[type=submit]{
