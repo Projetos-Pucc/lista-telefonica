@@ -12,15 +12,15 @@ services:
     networks:
       - default
     ports:
-      - 1234:80
+      - 8070:80
 
   mariadb:
     image: mariadb:latest
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user_password
+      - MYSQL_DATABASE=lista-telefonica
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
     volumes:
       - ./dump:/docker-entrypoint-initdb.d
       - mariadb-data:/var/lib/mysql
@@ -28,6 +28,16 @@ services:
       - default
     ports:
       - 3306:80
+
+  phpmyadmin: 
+    image: phpmyadmin/phpmyadmin
+    ports: 
+      - 8090:80
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+
+
 
 volumes:
   mariadb-data:
