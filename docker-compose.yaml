@@ -6,28 +6,19 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./src:/var/www/html
-    links:
-      - mariadb
-    networks:
-      - default
+      - "./src:/var/www/html"
     ports:
       - 8070:80
 
-  mariadb:
-    image: mariadb:latest
+  db:
+    image: mysql:latest
     environment:
-      - MYSQL_DATABASE=lista-telefonica
-      - MYSQL_USER=user
+      - MYSQL_DATABASE=listatelefonica
+      - MYSQL_USER=php-docker
       - MYSQL_PASSWORD=password
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
     volumes:
-      - ./dump:/docker-entrypoint-initdb.d
-      - mariadb-data:/var/lib/mysql
-    networks:
-      - default
-    ports:
-      - 3306:80
+      - "./dump:/docker-entrypoint-initdb.d"
 
   phpmyadmin: 
     image: phpmyadmin/phpmyadmin
@@ -36,8 +27,3 @@ services:
     environment:
       - PMA_HOST=db
       - PMA_PORT=3306
-
-
-
-volumes:
-  mariadb-data:
