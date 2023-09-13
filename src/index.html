@@ -24,18 +24,21 @@
     </header>
     <main>
         <section class="formulario">
+
             <form action="" method="POST">
                 <div class="linha-form">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" placeholder="Insira o Nome" class="campo-form">
                 </div>
+
                 <div class="linha-form">
                     <label for="telefone">Telefone</label>
                     <div class="campo-form-group-icon">
                         <input type="tel" id="telefone" name="tel[]" placeholder="Insira o(s) Telefone(s)"
-                            class="campo-form campo-form-input-icon">
+                            class="campo-form campo-form-input-icon" pattern="[\\(][0-9]{2}[\\)][9][0-9]{4}-[0-9]{4}">
                         <button class="campo-form-icon" id="input-add-phone">+</button>
                     </div>
+
                 </div>
                 <div id="more-buttons"></div>
                 <div class="botao-form">
