@@ -19,6 +19,11 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
     volumes:
       - "./dump:/docker-entrypoint-initdb.d"
+    deploy: 
+      resources: 
+        limits: 
+          cpus: '0.5'
+          memory: 2gb
 
   phpmyadmin: 
     image: phpmyadmin/phpmyadmin
@@ -27,3 +32,4 @@ services:
     environment:
       - PMA_HOST=db
       - PMA_PORT=3306
+
