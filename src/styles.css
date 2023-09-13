@@ -15,8 +15,9 @@ body{
 
 .titulo{
     text-align: center;
-    margin-top: 56px;
     font-size: 2em;
+    padding: 56px 0 ;
+
 }
 
 .formulario form{
@@ -36,6 +37,7 @@ body{
     margin:4px;
 
 }
+
 .linha-form {
     margin: 8px 0px;
 }
@@ -89,6 +91,7 @@ body{
     background-color: #0A71AB;
     cursor: pointer;
 }
+
 .botao-form{
     display: flex;
     width: 400px;
@@ -111,29 +114,22 @@ body{
 
 main{
     display: flex;
+    align-items: center;
+    height: calc(100%-(56px*2)-2em - 15%);
     justify-content: space-around;
 }
 
 .tabela{
-    /* background-color: white; */
-    width: 400px;
+    width: 500px;
     max-height: 400px;
-    min-height: 400px;
-    overflow-y: scroll; 
     border-collapse: collapse;
 }
-/* .tabela thead,.tabela tbody{
-    display: block;
-}
-.tabela tbody{
-    height: 400px;
-    overflow-y: scroll;
-} */
 
 .tabela tr:nth-of-type(2n+1){
     background-color: #d9d9d9;
 
 }
+
 .tabela tr td, .tabela tr th{
     
     text-align: center;
