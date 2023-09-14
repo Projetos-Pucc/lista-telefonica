@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background-color: #C2C2C2;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 2em;
+    padding: 56px 0 ;
+
+}
+
+.formulario form{
+    display: flex;
+    width: 480px;
+    padding: 35px 0;
+    background-color: #BABABA;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.linha-form label{
+    font-weight: bold;
+    display: block;
+    margin:4px;
+
+}
+
+.linha-form {
+    margin: 8px 0px;
+}
+
+.campo-form{
+    border:0;
+    outline: 0;
+    width: 400px;
+    height: 50px;
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    font-weight: light;
+    padding: 16px;
+    
+}
+
+.campo-form-group-icon {
+    position: relative;
+}
+
+.campo-form-icon {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background-color: rgba(10, 112, 171, 0.63);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.campo-form-icon:hover {
+    color: rgba(10, 112, 171, 0.63);
+    background-color: white;
+    transition: 660ms;
+}
+
+.botao-form input[type=submit]{
+    border: 0;
+    outline: 0;
+    width: 100px;
+    height: 32px;
+    font-weight: 600;
+    font-size: 12px;
+    color : white;
+    border-radius: 8px;
+    background-color: #0A71AB;
+    cursor: pointer;
+}
+
+.botao-form{
+    display: flex;
+    width: 400px;
+    justify-content: right;
+}
+
+.botao-form input[type=submit]:hover{
+    background-color:white;
+    color:  #0A71AB;
+    transition: 660ms;
+}
+
+.linha {
+    display: flex;
+    height: 500px;
+    size: 4px;
+    width: 1px;
+    border-color: black;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    height: calc(100%-(56px*2)-2em - 15%);
+    justify-content: space-around;
+}
+
+.tabela{
+    width: 500px;
+    max-height: 400px;
+    border-collapse: collapse;
+}
+
+.tabela tr:nth-of-type(2n+1){
+    background-color: #d9d9d9;
+
+}
+
+.tabela tr td, .tabela tr th{
+    
+    text-align: center;
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 5px;
+
+}
+
+.tabela thead{
+    font-weight: 800;
+}
