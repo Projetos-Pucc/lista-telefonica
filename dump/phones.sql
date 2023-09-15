@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db:3306
--- Tempo de geração: 12/09/2023 às 20:48
+-- Tempo de geração: 15/09/2023 às 13:43
 -- Versão do servidor: 8.1.0
 -- Versão do PHP: 8.2.8
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `webapp`
+-- Banco de dados: `listatelefonica`
 --
 
 -- --------------------------------------------------------
@@ -32,6 +32,13 @@ CREATE TABLE `phones` (
   `number` varchar(255) NOT NULL,
   `user_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Despejando dados para a tabela `phones`
+--
+
+INSERT INTO `phones` (`id`, `number`, `user_id`) VALUES
+(1, '3999678432', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -52,7 +59,7 @@ ALTER TABLE `phones`
 -- AUTO_INCREMENT de tabela `phones`
 --
 ALTER TABLE `phones`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
