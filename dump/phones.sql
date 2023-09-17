@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `phones` (
-  `id` int NOT NULL,
+  `id_phone` int NOT NULL,
   `number` varchar(255) NOT NULL,
   `user_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -37,7 +37,7 @@ CREATE TABLE `phones` (
 -- Despejando dados para a tabela `phones`
 --
 
-INSERT INTO `phones` (`id`, `number`, `user_id`) VALUES
+INSERT INTO `phones` (`id_phone`, `number`, `user_id`) VALUES
 (1, '3999678432', 1);
 
 --
@@ -48,7 +48,7 @@ INSERT INTO `phones` (`id`, `number`, `user_id`) VALUES
 -- Índices de tabela `phones`
 --
 ALTER TABLE `phones`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_phone`),
   ADD KEY `FOREIGN` (`user_id`);
 
 --
@@ -59,7 +59,7 @@ ALTER TABLE `phones`
 -- AUTO_INCREMENT de tabela `phones`
 --
 ALTER TABLE `phones`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_phone` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -27,9 +27,9 @@
             'listatelefonica'    # db table
         );
 
-        $query = "SELECT u.id, p.user_id, u.name, p.number           # creating a single query and 
+        $query = "SELECT u.id_user, p.id_phone, u.name, p.number           # creating a single query and 
                   FROM user AS u
-                  LEFT JOIN phones AS p ON u.id = p.user_id
+                  LEFT JOIN phones AS p ON u.id_user = p.user_id
                   ORDER BY u.name ASC";
           
         $response = mysqli_query($connect, $query);
@@ -77,7 +77,7 @@
                             <td><?php echo $row['name']; ?></td>
                             <td><?php echo $row['number']; ?></td>
                             <td>
-                            <a href="remove.php?user_id=<?php echo $row['user_id']; ?>&phone_id=<?php echo $row['id']; ?>">X</a>
+                            <a href="remove.php?user_id=<?php echo $row['id_user']; ?>&phone_id=<?php echo $row['id_phone']; ?>">X</a>
                             </td>
                         </tr>
                     <?php } ?>
