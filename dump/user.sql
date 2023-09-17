@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `user` (
-  `id` int NOT NULL,
+  `id_user` int NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -36,7 +36,7 @@ CREATE TABLE `user` (
 -- Despejando dados para a tabela `user`
 --
 
-INSERT INTO `user` (`id`, `name`) VALUES
+INSERT INTO `user` (`id_user`, `name`) VALUES
 (1, 'Pedro H P P Amantte');
 
 --
@@ -47,7 +47,7 @@ INSERT INTO `user` (`id`, `name`) VALUES
 -- Índices de tabela `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -57,7 +57,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
